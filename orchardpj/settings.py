@@ -57,9 +57,18 @@ ROOT_URLCONF = 'orchardpj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [os.path.join(BASE_DIR, 'templates'),
                  os.path.join(BASE_DIR, 'home', 'templates'),
                  ],
+=======
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'home', 'templates', 'home'),
+            os.path.join(BASE_DIR, 'cart', 'templates', 'cart'),
+
+        ],
+>>>>>>> e21c9b5c57dbe780d01c1c2c78495a6ed1bf8156
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
