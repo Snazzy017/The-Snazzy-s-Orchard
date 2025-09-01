@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>The Snazzy's Orchard</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">    
+</head>
+<body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+    {% block content%}
+    {% endblock%}
+    <footer>
+      <p>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </p>
+      <p>@ 2025 Snazzy's Orchard.All rights reserved.</p>
+    </footer>
+    <section class="p-3 ms-footer-bottom bg-dark">
+            <div class="container d-flex justify-content-between flex-wrap text-white">
+                <div class="me-5 mb-2">
+                    <span>
+                        Designed & Developed by
+                        <a href="c:\Users\AM\Downloads\WhatsApp Image 2025-07-23 at 21.48.50 (1).jpeg" target="_blank" class="text-white text-decoration-none">
+                            Suzan Makau
+                        </a>
+                    </span>
+                </div>
+              </div>
+    </section>
+    
+</body>
+</html>
