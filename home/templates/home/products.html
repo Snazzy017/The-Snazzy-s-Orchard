@@ -1,42 +1,81 @@
-<<<<<<< HEAD
 {% extends 'base.html'%}
+{% load static %}
+
 
 {% block tittle %}products-Snazzy's Orchard{% endblock %}
 
 {% block content %}
-<div class="products-section">
-    <h1>Our fresh fruits</h1>
-    <p>We sell a variety of freshly harvested fruits straight from the farm</p>
-    <div class="products-list">
-        <div class="product">
-            <h2>Apples</h2>
-            <p>Fresh red and green apples, full of flavour and vitamins</p>
-        </div>
-        <div class="product">
-            <h2>Bananas</h2>
-            <p>Sweet ripe bananas, perfect for snacking and smoothies</p>
-        </div>
-        <div class="product">
-            <h2>Oranges</h2>
-            <p>Juicy oranges packed with vitamin c for a healthy boost</p>
-        </div>
-        <div class="product">
-            <h2>Pineapples</h2>
-            <p>Golden pineapples that are sweet, tangy and refreshing.</p>
-        </div>
-    </div>
-    {% endblock content %}
 
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>products</h1>
-</body>
-</html>
->>>>>>> e21c9b5c57dbe780d01c1c2c78495a6ed1bf8156
+<br><br><br><br><br><br><br><br>
+
+<div class=products-section"">
+    <h1 class="products_title">Our fresh fruits</h1>
+    <p class="product_paragraph">We sell a variety of freshly harvested fruits straight from the farm</p>
+    <div class="products-container">
+        <!--Apple card-->
+        <div class="product-card">
+             <h2>Apples</h2>
+            <img src="{% static 'C:\Users\AM\Desktop\The-Snazzy-s-Orchard\static\images\Apples.png.jpg' %}" alt="">
+            <p>Fresh red and green apples, full of flavour and vitamins</p>
+            <button class="buy-btn">buy now</button>
+            <p class="price">$100/kg</p>
+        </div>
+        <!--Banana card-->
+        <div class="product-card">
+            <h2>Bananas</h2>
+            <img src="{% static 'C:\Users\AM\Desktop\The-Snazzy-s-Orchard\static\images\Fresh Banans.png.jpg' %}" alt="">
+            <p>Sweet ripe bananas, perfect for snacking and smoothies</p>
+            <button class="buy-btn">buy now</button>
+            <p class="price">$100/kg</p>
+        </div>
+        <!--Orange card-->
+        <div class="product-card">
+            <h2>Oranges</h2>
+            <img src="{% static 'C:\Users\AM\Desktop\The-Snazzy-s-Orchard\static\images\Fresh oranges.jpg' %}" alt="">
+            <p>Juicy oranges packed with vitamin c for a healthy boost</p>
+            <button class="buy-btn">buy now</button>
+            <p class="price">$100/kg</p>
+        </div>
+        <!--Pineapple card-->
+        <div class="product-card">
+            <h2>Pineapples</h2>
+            <img src="{% static 'C:\Users\AM\Desktop\The-Snazzy-s-Orchard\static\images\Pineapples.jpg' %}" alt="">
+            <p>Golden pineapples that are sweet, tangy and refreshing.</p>
+            <button class="buy-btn">buy now</button>
+            <p class="price">$100/kg</p>
+        </div>
+        <!--Mango card-->
+        <div class="product-card">
+            <h2>Mangoes</h2>
+            <img src="{% static 'C:\Users\AM\Desktop\The-Snazzy-s-Orchard\static\images\Mangues.jpg' %}" alt="">
+            <p>Sweet, golden mangoes packed with tropical goodness.</p> 
+            <button class="buy-btn">buy now</button>
+            <p class="price">$100/kg</p>
+        </div>
+        <!--Strawberries card-->
+        <div class="product-card">
+            <h2>Strawberries</h2>
+            <img src="{% static 'C:\Users\AM\Desktop\The-Snazzy-s-Orchard\static\images\strawberry.jpg' %}" alt="">
+            <p>Fresh strawberries with a rich, sweet-tart flavor.</p> 
+            <button class="buy-btn">buy now</button>
+            <p class="price">$100/kg</p>
+        </div>
+        <!--Avacados card-->
+        <div class="product-card">
+            <h2>Avacados</h2>
+            <img src="{% static 'C:\Users\AM\Desktop\The-Snazzy-s-Orchard\static\images\Avocados.png.jpg' %}" alt="">
+            <p>Creamy avocados rich in healthy fats, perfect for salads,spreads and smoothies.</p>  
+            <button class="buy-btn">buy now</button>
+            <p class="price">$100/kg</p>
+        </div>
+        <!--Watermelon card-->     
+        <div class="product-card">
+            <h2>Watermelon</h2>
+            <img src="{% static 'C:\Users\AM\Desktop\The-Snazzy-s-Orchard\static\images\Watermelon.jpg' %}" alt="">
+            <p>Refreshing watermelons full of juice, perfect for hot days</p>
+            <button class="buy-btn">buy now</button>
+            <p class="price">$100/kg</p>
+        </div>
+
+    </div>
+{% endblock content %}

@@ -57,18 +57,12 @@ ROOT_URLCONF = 'orchardpj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),
-                 os.path.join(BASE_DIR, 'home', 'templates'),
-                 ],
-=======
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'home', 'templates', 'home'),
             os.path.join(BASE_DIR, 'cart', 'templates', 'cart'),
 
         ],
->>>>>>> e21c9b5c57dbe780d01c1c2c78495a6ed1bf8156
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,6 +123,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = ['static/']
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

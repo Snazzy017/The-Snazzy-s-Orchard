@@ -1,42 +1,380 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>The Snazzy's Orchard</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">    
-</head>
-<body>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Products</a>
-      <a href="#">Contact</a>
-    </nav>
-    {% block content%}
-    {% endblock%}
-    <footer>
-      <p>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-      </p>
-      <p>@ 2025 Snazzy's Orchard.All rights reserved.</p>
-    </footer>
-    <section class="p-3 ms-footer-bottom bg-dark">
-            <div class="container d-flex justify-content-between flex-wrap text-white">
-                <div class="me-5 mb-2">
-                    <span>
-                        Designed & Developed by
-                        <a href="c:\Users\AM\Downloads\WhatsApp Image 2025-07-23 at 21.48.50 (1).jpeg" target="_blank" class="text-white text-decoration-none">
-                            Suzan Makau
-                        </a>
-                    </span>
-                </div>
-              </div>
-    </section>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     
-</body>
-</html>
+
+        <title>Snazzy Orchard</title>
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="144x144" href="{% static 'assets/ico/apple-touch-icon-144-precomposed.png' %}">
+        <link rel="shortcut icon" href="{% static 'C:\Users\AM\Desktop\The-Snazzy-s-Orchard\static\assets\ico\Snazzy.jpg' %}">
+
+        <!-- Font Icon -->
+        <link href="{% static 'assets/css/plugin/font-awesome.min.css' %}" rel="stylesheet" type="text/css">  
+
+        <!-- CSS Global -->
+        <link href="{% static 'assets/css/plugin/bootstrap.min.css' %}" rel="stylesheet" type="text/css">  
+        <link href="{% static 'assets/css/plugin/bootstrap-select.min.css' %}" rel="stylesheet" type="text/css">           
+        <link href="{% static 'assets/css/plugin/animate.css' %}" rel="stylesheet" type="text/css"> 
+        <link href="{% static 'assets/css/plugin/subscribe-better.css' %}" rel="stylesheet" type="text/css"> 
+        <link href="{% static 'assets/css/plugin/owl.carousel.min.css' %}" rel="stylesheet" type="text/css">
+        <!-- Custom CSS -->
+        <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css1/style.css' %}" rel="stylesheet" type="text/css">
+      
+    </head>
+
+    <body id="home" class="wide">
+
+        <!--
+        <div id="loading">
+            <div class="loader">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+        -->
+        <!-- WRAPPER -->
+        <main class="wrapper home-wrap"> 
+            <!-- Main Header Start -->
+            <header class="main-header">                  
+                <div class="container-fluid rel-div">
+                    <div class="col-lg-4 col-sm-8">
+                      <!--Nav logo starts here-->
+                        <div class="main-logo">
+                            <a href="{% url 'home'%}"> <img alt="" src="{% static 'assets/img/logo/logo.png' %}" />  </a>
+                            <span class="medium-font">SNAZZY ORCHARDE</span>
+                        </div>
+                      <!--Nav logo ends here-->
+                    </div>
+
+                    <div class="col-lg-6 responsive-menu">  
+                        <div class="responsive-toggle fa fa-bars"> </div>
+                        <nav class="fix-navbar" id="primary-navigation">            
+                            <ul class="primary-navbar">                                                 
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li><a href="{% url 'products' %}">Products</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>   
+                            </ul>                           
+                        </nav>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-4 cart-megamenu">
+                        <div class="cart-hover">
+                            <a href="#"> <img alt="" src="{% static 'assets/img/icons/cart-icon.png' %}" /> </a>
+                            <span class="cnt crl-bg">2</span> <span class="price">Ksh 2170.00</span>
+                            <ul class="pop-up-box cart-popup">
+                                <li class="cart-list">
+                                    <div class="cart-img"> <img src="{% static 'assets/img/extra/cart-sm-1.jpg' %}" alt=""> </div>
+                                    <div class="cart-title">
+                                        <div class="fsz-16">
+                                            <a href="#"> <span class="light-font"> organic </span>  <strong>almonds</strong></a>
+                                            <h6 class="sub-title-1">DRY FRUITS</h6>
+                                        </div>
+                                        <div class="price"> 
+                                            <strong class="clr-txt">Ksh 570.00 </strong> <del class="light-font">ksh 765.00 </del>
+                                        </div>
+                                    </div>
+                                    <div class="close-icon"> <i class="fa fa-close clr-txt"></i> </div>
+                                </li>
+
+                                <li class="cart-list">
+                                    <div class="cart-img"> <img src="{% static 'assets/img/extra/cart-sm-2.jpg' %}" alt=""> </div>
+                                    <div class="cart-title">
+                                        <div class="fsz-16">
+                                            <a href="#"> <span class="light-font"> organic </span>  <strong>pepper</strong></a>
+                                            <h6 class="sub-title-1">VEGETABLES</h6>
+                                        </div>
+                                        <div class="price"> 
+                                            <strong class="clr-txt">ksh 50.00 </strong> <del class="light-font">ksh 65.00 </del>
+                                        </div>
+                                    </div>
+                                    <div class="close-icon"> <i class="fa fa-close clr-txt"></i> </div>
+                                </li>
+
+                                <li class="cart-list">
+                                    <div class="cart-img"> <img src="{% static 'assets/img/extra/cart-sm-3.jpg' %}" alt=""> </div>
+                                    <div class="cart-title">
+                                        <div class="fsz-16">
+                                            <a href="#"> <span class="light-font"> organic </span>  <strong>onion</strong></a>
+                                            <h6 class="sub-title-1">VAGETABLES</h6>
+                                        </div>
+                                        <div class="price"> 
+                                            <strong class="clr-txt">ksh 50.00 </strong> <del class="light-font">ksh 65.00 </del>
+                                        </div>
+                                    </div>
+                                    <div class="close-icon"> <i class="fa fa-close clr-txt"></i> </div>
+                                </li>
+
+                                <li class="cart-list sub-total">
+                                    <div class="pull-left"> 
+                                        <strong>Subtotal</strong>
+                                    </div>
+                                    <div class="pull-right"> 
+                                        <strong class="clr-txt">ksh 150.00</strong>
+                                    </div>
+                                </li>
+                                <li class="cart-list buttons">
+                                    <div class="pull-left"> 
+                                        <a href="cart.html" class="theme-btn-sm-2">View Cart</a>
+                                    </div>
+                                    <div class="pull-right"> 
+                                        <a href="checkout.html" class="theme-btn-sm-3"> Checkout </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Nav bar dropdown feature
+                        <div class="mega-submenu">
+
+                            <span class="nav-trigger">
+                                <a class="menu-toggle" href="#"> <img src="{% static 'assets/img/icons/menu.png' %}" alt="" /> </a>
+                            </span>
+                            <div class="mega-dropdown-menu">
+                                <a class="menu-toggle fa fa-close" href="#">  </a>
+                                <div class="slider-mega-menu">
+                                    <div class="menu-block">
+                                        <div class="menu-caption">                                                               
+                                            <h2 class="menu-title"> <span class="light-font"> Fresh </span>  <strong>Fruits</strong> </h2>
+                                            <ul class="sub-list">
+                                                <li> <a href="#">Banana</a> </li>
+                                                <li> <a href="#">Water Melon </a> </li>
+                                                <li> <a href="#">Blackberry </a> </li>
+                                                <li> <a href="#">Plume</a> </li>
+                                                <li> <a href="#">Orange</a> </li>
+                                                <li> <a href="#">Lemon</a> </li>
+                                                <li> <a href="#">Pineapple</a> </li>
+                                                <li> <a href="#">Apple</a> </li>
+                                                <li> <a href="#">Kiwi</a> </li>
+                                            </ul>
+                                            <h2 class="title"> <a href="#" class="clr-txt"> All Fruits </a> </h2>
+                                        </div>
+                                        <div class="menu-img">
+                                            <img alt="" src="{% static 'assets/img/extra/menu-1.png' %}" />
+                                        </div>
+                                    </div>  
+                                    <div class="menu-block">
+                                        <div class="menu-caption">                                                               
+                                            <h2 class="menu-title"> <span class="light-font"> Fresh </span>  <strong>Vegetables</strong> </h2>
+                                            <ul class="sub-list">
+                                                <li> <a href="#">Cabbage</a> </li>
+                                                <li> <a href="#">Garlic </a> </li>
+                                                <li> <a href="#">Onion </a> </li>
+                                                <li> <a href="#">Plume</a> </li>
+                                                <li> <a href="#">Carrot</a> </li>
+                                                <li> <a href="#">Papper</a> </li>
+                                                <li> <a href="#">Mushrome</a> </li>
+                                                <li> <a href="#">Apple</a> </li>
+                                                <li> <a href="#">Kiwi</a> </li>
+                                            </ul>
+                                            <h2 class="title"> <a href="#" class="clr-txt"> All Vegetables </a> </h2>
+                                        </div>
+                                        <div class="menu-img">
+                                            <img alt="" src="{% static 'assets/img/extra/menu-2.png' %}" />
+                                        </div>
+                                    </div>  
+                                    <div class="menu-block">
+                                        <div class="menu-caption">                                                               
+                                            <h2 class="menu-title"> <span class="light-font"> Fresh </span>  <strong>Dread Juices</strong> </h2>
+                                            <ul class="sub-list">
+                                                <li> <a href="#">Banana Juice</a> </li>
+                                                <li> <a href="#">Water Melon Juice</a> </li>
+                                                <li> <a href="#">Blackberry Juice</a> </li>
+                                                <li> <a href="#">Plume Juice</a> </li>
+                                                <li> <a href="#">Orange Juice</a> </li>
+                                                <li> <a href="#">Lemon Juice</a> </li>
+                                                <li> <a href="#">Pineapple Juice</a> </li>
+                                                <li> <a href="#">Apple Juice</a> </li>
+                                                <li> <a href="#">Kiwi Juice</a> </li>
+                                            </ul>
+                                            <h2 class="title"> <a href="#" class="clr-txt"> All Dread juices </a> </h2>
+                                        </div>
+                                        <div class="menu-img">
+                                            <img alt="" src="{% static 'assets/img/extra/menu-3.png' %}" />
+                                        </div>
+                                    </div>  
+                                    <div class="menu-block">
+                                        <div class="menu-caption">                                                               
+                                            <h2 class="menu-title"> <span class="light-font"> Fresh </span>  <strong>Juices</strong> </h2>
+                                            <ul class="sub-list">
+                                                <li> <a href="#">Banana Juice</a> </li>
+                                                <li> <a href="#">Water Melon Juice</a> </li>
+                                                <li> <a href="#">Blackberry Juice</a> </li>
+                                                <li> <a href="#">Plume Juice</a> </li>
+                                                <li> <a href="#">Orange Juice</a> </li>
+                                                <li> <a href="#">Lemon Juice</a> </li>
+                                                <li> <a href="#">Pineapple Juice</a> </li>
+                                                <li> <a href="#">Apple Juice</a> </li>
+                                                <li> <a href="#">Kiwi Juice</a> </li>
+                                            </ul>
+                                            <h2 class="title"> <a href="#" class="clr-txt"> All Fresh Juices </a> </h2>
+                                        </div>
+                                        <div class="menu-img">
+                                            <img alt="" src="{% static 'assets/img/extra/menu-1.png' %}" />
+                                        </div>
+                                    </div>  
+                                    <div class="menu-block">
+                                        <div class="menu-caption">                                                               
+                                            <h2 class="menu-title"> <span class="light-font"> Fresh </span>  <strong>Breads</strong> </h2>
+                                            <ul class="sub-list">
+                                                <li> <a href="#">Banana</a> </li>
+                                                <li> <a href="#">Water Melon </a> </li>
+                                                <li> <a href="#">Blackberry </a> </li>
+                                                <li> <a href="#">Plume</a> </li>
+                                                <li> <a href="#">Orange</a> </li>
+                                                <li> <a href="#">Lemon</a> </li>
+                                                <li> <a href="#">Pineapple</a> </li>
+                                                <li> <a href="#">Apple</a> </li>
+                                                <li> <a href="#">Kiwi</a> </li>
+                                            </ul>
+                                            <h2 class="title"> <a href="#" class="clr-txt"> All Fresh Bread </a> </h2>
+                                        </div>
+                                        <div class="menu-img">
+                                            <img alt="" src="{% static 'assets/img/extra/menu-5.png' %}" />
+                                        </div>
+                                    </div>  
+                                    <div class="menu-block">
+                                        <div class="menu-caption">                                                               
+                                            <h2 class="menu-title"> <span class="light-font"> Fresh </span>  <strong>Tea</strong> </h2>
+                                            <ul class="sub-list">
+                                                <li> <a href="#">Cabbage</a> </li>
+                                                <li> <a href="#">Garlic </a> </li>
+                                                <li> <a href="#">Onion </a> </li>
+                                                <li> <a href="#">Plume</a> </li>
+                                                <li> <a href="#">Carrot</a> </li>
+                                                <li> <a href="#">Papper</a> </li>
+                                                <li> <a href="#">Mushrome</a> </li>
+                                                <li> <a href="#">Apple</a> </li>
+                                                <li> <a href="#">Kiwi</a> </li>
+                                            </ul>
+                                            <h2 class="title"> <a href="#" class="clr-txt"> All Freash Tea </a> </h2>
+                                        </div>
+                                        <div class="menu-img">
+                                            <img alt="" src="{% static 'assets/img/extra/menu-6.png' %}" />
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+
+                        ends here-->
+                        <div class="responsive-toggle fa fa-bars"> </div>
+                    </div>
+
+                </div>  
+            </header>
+            <!-- / Main Header Ends -->   
+        </main>
+        <!-- /WRAPPER --> 
+         
+        {% block content %}
+        <!--Body Content goes here-->
+        {% endblock  %}
+
+        <!-- FOOTER -->
+        <footer class="page-footer"> 
+                <section class="sec-space light-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12 footer-widget">
+                                <div class="main-logo">
+                                    <a href="index.html"> <img alt="" src="{% static 'assets/img/logo/ogo.png' %}" />  </a>
+                                    <span class="medium-font">SNAZZY ORCHARD</span>
+                                </div>
+                                <span class="divider-2"></span>
+                                <div class="text-widget">
+                                    <p>Bringing you fresh, organic fruits handpicked from Kenyan farms. Taste the goodness of nature, grown with love and care.</p>
+                                    <ul>
+                                        <li> <i class="fa fa-map-marker"></i> <span> <strong>Makueni</strong> Makueni County</span> </li>
+                                        <li> <i class="fa fa-envelope-square"></i> <span><a href="#">snazzyorchard@gmail.com</a> </span> </li>
+                                        <li> <i class="fa fa-phone-square"></i> <span><a href="#">www.snazzyorchard.com</a> </span> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 footer-widget">
+                                <h2 class="title-1">  <span class="light-font">Snazzy Orchard </span> <strong>information </strong> </h2>
+                                <span class="divider-2"></span>
+                                <ul class="list">
+                                    <li> <a href="#"> about us </a> </li>
+                                    <li> <a href="#"> our farms </a> </li>
+                                    <li> <a href="#"> products </a> </li>
+                                    <li> <a href="#"> faqs </a> </li>
+                                    <li> <a href="#"> how we grow </a> </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-sm-4 footer-widget">
+                                <h2 class="title-1">  <span class="light-font">my  </span> <strong>account </strong> </h2>
+                                <span class="divider-2"></span>
+                                <ul class="list">
+                                    <li> <a href="my-account.html"> my account </a> </li>
+                                    <li><a href="account-information.html"> Account Information </a></li>
+                                    <li><a href="address-book.html"> Address Books</a></li>
+                                    <li><a href="order-history.html"> Order History</a></li>
+                                    <li><a href="review-rating.html"> Reviews and Ratings</a></li>
+                                    <li><a href="return.html"> Returns Requests</a></li>
+                                    <li><a href="newsletter.html"> Newsletter</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-sm-4 footer-widget">
+                                <h2 class="title-1">  <span class="light-font">photo  </span> <strong>instagram </strong> </h2>
+                                <span class="divider-2"></span>
+                                <ul class="instagram-widget">
+                                    <li> <a href="#"> <img src="{% static 'assets/img/extra/80x80-2.jpg' %}" alt="" /> </a> </li>
+                                    <li> <a href="#"> <img src="{% static 'assets/img/extra/80x80-2.jpg' %}" alt="" /> </a> </li>
+                                    <li> <a href="#"> <img src="{% static 'assets/img/extra/80x80-3.jpg' %}" alt="" /> </a> </li>
+                                    <li> <a href="#"> <img src="{% static 'assets/img/extra/80x80-4.jpg' %}" alt="" /> </a> </li>
+                                    <li> <a href="#"> <img src="{% static 'assets/img/extra/80x80-5.jpg' %}" alt="" /> </a> </li>
+                                    <li> <a href="#"> <img src="{% static 'assets/img/extra/80x80-6.jpg' %}" alt="" /> </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="footer-bottom">
+                    <div class="pattern"> 
+                        <img alt="" src="{% static 'assets/img/icons/white-pattern.png' %}">
+                    </div>
+                    <div id="to-top" class="to-top"> <i class="fa fa-arrow-circle-o-up"></i> </div>
+                    <div class="container ptb-50">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-5">
+                                <p>©2025 <a href="#"> <strong> snazzyorchard.com</strong> </a>, made with <i class="fa fa-heart red-clr"></i> by Susan Makau, all right reserved</p>
+                            </div>
+                            <div class="col-md-6 col-sm-7">
+                                <ul class="primary-navbar footer-menu">
+                                    <li> <a href="#">contact us </a> </li>
+                                    <li> <a href="#">term of use  </a> </li>
+                                    <li> <a href="#">site map  </a> </li>
+                                    <li> <a href="#">privacy policy</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </footer>
+        <!-- /FOOTER -->    
+         
+
+        <!-- JS Global -->
+        <script src="{% static 'assets/js/plugin/jquery-2.2.4.min.js' %}"></script>   
+        <script src="{% static 'assets/js/plugin/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/js/plugin/bootstrap-select.min.js' %}"></script>
+        <script src="{% static 'assets/js/plugin/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets/js/plugin/jquery.plugin.min.js' %}"></script>
+        <script src="{% static 'assets/js/plugin/jquery.countdown.js' %}"></script>
+        <script src="{% static 'assets/js/plugin/jquery.subscribe-better.min.js' %}"></script>
+
+        <!-- Custom JS -->   
+        <script src="{% static 'assets/js/theme.js' %}"></script>
+
+
+    </body>
+</html>        
