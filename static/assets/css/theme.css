@@ -1337,17 +1337,8 @@ blockquote {
 /*--------------------- 1.11 - Slider Pagination Ends------------------------- */
 
 /*--------- 1.12 Breadcrumb Starts ---------- */
-.breadcrumb-bg {
-    background-image: url("../img/extra/breadcrumb-1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 80px 0 100px;
-}
 
-.breadcrumb-bg.bg-2 {
-    background-image: url("../img/extra/breadcrumb-2.jpg");
-    text-align: center;
-}
+
 
 .site-breadcumb .section-title {
     font-size: 30px;

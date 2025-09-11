@@ -4,6 +4,8 @@ from .views import (
     contact,
     about,
     products,
+    cart,
+    checkout,
 )
 
 urlpatterns = [
@@ -11,4 +13,8 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('products/', products, name='products'),
     path('about/', about, name='about'),
+    path('cart/', cart, name='cart'),
+    path('checkout/', checkout, name='checkout')
+
+
 ]

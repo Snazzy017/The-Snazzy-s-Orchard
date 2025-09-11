@@ -1,11 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1> about </h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}We are Snazzy Orchard {% endblock %}
+{% block content %}
+
+    <!--Breadcrumb Section Start-->
+    <br><br><br><br><br><br><br><br><br>
+    <section class="breadcrumb-bg">                
+        <div class="theme-container container ">                       
+            <div class="site-breadcumb white-clr">                        
+                <h2 class="section-title"> <strong class="clr-txt">Snazzy Orchard</strong><br><br>  <span class="light-font"> Our fruits Catalogue </span> </h2>
+                <ol class="breadcrumb breadcrumb-menubar">
+                    <li> <a href="#"> Home </a> SHOP  </li>                             
+                </ol>
+            </div>  
+        </div>
+    </section>
+    <!--Breadcrumb Section End-->
+
+ <!-- Organic Farmfood Starts-->
+    <section class="organic-farm sec-space-top light-bg">
+
+        <img alt="" src="{% static 'assets/img/extra/sec-img-1.png' %}" class="left-bg-img" />  
+        <img alt="" src="{% static 'assets/img/extra/sec-img-2.png' %}" class="center-bg-img" />  
+
+        <div class="container rel-div">
+            <div class="title-wrap">
+                <h2 class="section-title"> <span class="light-font">we are </span> <strong>Snazzy Orchard <img src="{% static 'assets/img/icons/logo-icon.png' %}" alt="" /> </strong> </h2>
+                <h4 class="sub-title"> <span> ABOUT SNAZZY ORCHARD </span> </h4>
+                <p>Snazzy Orchard is your trusted source for fresh, organic fruits and vegetables grown with care on Kenyan farms. From the sweet mangoes of Eastern Kenya to the vibrant pineapples, avocados, and leafy greens from across the country, we bring you nature’s finest harvest. At Snazzy Orchard, we believe in healthy living, sustainability, and supporting local farmers while delivering delicious farm-fresh produce straight to your table. </p>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 text-center">
+                    <div class="feature-wrap">
+                        <img src="{% static 'assets/img/extra/feature-1.png' %}" alt="" />
+                        <h3 class="title-1 ptb-15"> <span class="light-font">Farm-Fresh </span> <strong>  Guarantee</strong> </h3>
+                        <p>All our produce is handpicked directly from Kenyan farms for peak freshness.  </p>
+                        <a href="#" class="sm-bnt-wht">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center">
+                    <div class="feature-wrap">
+                        <img src="{% static 'assets/img/extra/feature-2.png' %}" alt="" />
+                        <h3 class="title-1 ptb-15"> <span class="light-font"> 100%</span> <strong> organic goods</strong> </h3>
+                        <p>No harmful chemicals or artificial additives, just pure natural goodness.  </p>
+                        <a href="#" class="sm-bnt-wht">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center">
+                    <div class="feature-wrap">
+                        <img src="{% static 'assets/img/extra/feature-3.png' %}" alt="" />
+                        <h3 class="title-1 ptb-15"> <span class="light-font">Support </span> <strong> Local Farmers</strong> </h3>
+                        <p>We work closely with Kenyan farmers to empower communities and promote sustainable livelihoods. </p>
+                        <a href="#" class="sm-bnt-wht">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center">
+                    <div class="feature-wrap">
+                        <img src="{% static 'assets/img/extra/feature-4.png' %}" alt="" />
+                        <h3 class="title-1 ptb-15"> <span class="light-font">100% </span> <strong>natural</strong> </h3>
+                        <p>Every product can be traced back to its source for quality assurance.  </p>
+                        <a href="#" class="sm-bnt-wht">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rel-div feature-img">
+                <img src="{% static 'assets/img/extra/features.png' %}" alt="" />
+            </div>
+        </div>
+    </section>
+    <!-- / Organic Farmfood Ends -->    
+
+
+
+
+
+{% endblock %}
