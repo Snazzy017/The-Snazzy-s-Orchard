@@ -1,0 +1,294 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Snazzy Orchard | Shop {% endblock  %}
+{% block content %}
+
+    <!--Breadcrumb Section Start-->
+    <br><br><br><br><br><br><br><br><br>
+    <section class="breadcrumb-bg">                
+        <div class="theme-container container ">                       
+            <div class="site-breadcumb white-clr">                        
+                <h2 class="section-title"> <strong class="clr-txt">Snazzy Orchard</strong><br><br>  <span class="light-font"> Our fruits Catalogue </span> </h2>
+                <ol class="breadcrumb breadcrumb-menubar">
+                    <li> <a href="#"> Home </a> SHOP  </li>                             
+                </ol>
+            </div>  
+        </div>
+    </section>
+    <!--Breadcrumb Section End-->
+
+    <!-- Shop Starts-->
+    <section class="shop-wrap sec-space-bottom">
+        <div class="pattern"> 
+            <img alt="" src="{% static 'assets/img/icons/white-pattern.png' %}">
+        </div>
+
+        <div class="container rel-div">
+  
+            <div class="tab-content shop-content">
+                <div id="grid-view" class="tab-pane fade active in" role="tabpanel">
+                    <div class="row"> 
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="" src="{% static 'assets/img/products/7.jpg' %}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />  
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a  href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>                                           
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="{% url 'cart' %}"> <span class="light-font"> organic </span>  <strong>grapes</strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs 50.00 per kg </strong> <del class="light-font">kshs 50.00  </del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="" src="{% static 'assets/img/products/6.jpg' %}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />  
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a  href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>                                           
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="{% url 'cart' %}"> <span class="light-font"> organic </span>  <strong>mangoes</strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs 50.00 per kg  </strong> <del class="light-font">kshs 50.00  </del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="" src="{% static 'assets/img/products/3.jpg' %}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a  href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>  <strong>mangoes</strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs 50.00 per kg  </strong> <del class="light-font">kshs 50.00 </del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="" src="{% static 'assets/img/products/5.jpg' %}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />  
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a  href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>                                           
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="{% url 'cart' %}"> <span class="light-font"> organic </span>  <strong>pinapple</strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs 50.00 per kg  </strong> <del class="light-font">kshs 50.00  </del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="" src="{% static 'assets/img/products/2.jpg' %}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />  
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a  href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>                                           
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>  <strong>orange</strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs 50.00 per kg </strong> <del class="light-font">kshs 50.00   </del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="" src="{% static 'assets/img/products/4.jpg' %}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />  
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a  href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>                                           
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="{% url 'cart' %}"> <span class="light-font"> green </span>  <strong>watermelon</strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs 50.00 per kg </strong> <del class="light-font">kshs 50.00   </del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="" src="{% static 'assets/img/products/8.jpg' %}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a  href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="{% url 'cart' %}"> <span class="light-font"> organic </span>  <strong>tomato </strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs 50.00 per kg  </strong> <del class="light-font">kshs 50.00  </del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="" src="{% static 'assets/img/products/1.jpg' %}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />  
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a  href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>                                           
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="{% url 'cart' %}"> <span class="light-font"> organic </span>  <strong>tomato</strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs 50.00 per kg  </strong> <del class="light-font">kshs 50.00   </del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="" src="{% static 'assets/img/products/3.jpg' %}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a  href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="{% url 'cart' %}"> <span class="light-font"> organic </span>  <strong>mango</strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs 50.00 per kg </strong> <del class="light-font">kshs 50.00  </del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="" src="{% static 'assets/img/products/5.jpg' %}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />  
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a  href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>                                           
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>  <strong>pinapple</strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs 50.00 per kg 0 </strong> <del class="light-font">kshs 50.00 </del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="" src="{% static 'assets/img/products/2.jpg' %}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />  
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a  href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>                                           
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="{% url 'cart' %}"> <span class="light-font"> organic </span>  <strong>orange</strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs 50.00 per kg  </strong> <del class="light-font">kshs 50.00 </del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="" src="{% static 'assets/img/products/4.jpg' %}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />  
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a  href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>                                           
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="{% url 'cart' %}"> <span class="light-font"> green </span>  <strong>melon</strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs 50.00 per kg  </strong> <del class="light-font">kshs 50.00  </del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- / Shop Ends -->        
+
+{% endblock  %}

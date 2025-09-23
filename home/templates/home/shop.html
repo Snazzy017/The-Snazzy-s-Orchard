@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Snazzy Orchard | Shop {% endblock %}
+{% block content %}
+
+    <!--Breadcrumb Section Start-->
+    <br><br><br><br><br><br><br><br><br>
+    <section class="breadcrumb-bg">                
+        <div class="theme-container container">                       
+            <div class="site-breadcumb white-clr">                        
+                <h2 class="section-title"> 
+                    <strong class="clr-txt">Snazzy Orchard</strong><br><br>  
+                    <span class="light-font"> Our fruits Catalogue </span> 
+                </h2>
+                <ol class="breadcrumb breadcrumb-menubar">
+                    <li> <a href="{% url 'home' %}"> Home </a> SHOP </li>                             
+                </ol>
+            </div>  
+        </div>
+    </section>
+    <!--Breadcrumb Section End-->
+
+    <!-- Shop Starts-->
+    <section class="shop-wrap sec-space-bottom">
+        <div class="pattern"> 
+            <img alt="" src="{% static 'assets/img/icons/white-pattern.png' %}">
+        </div>
+
+        <div class="container rel-div">
+            <div class="tab-content shop-content">
+                <div id="grid-view" class="tab-pane fade active in" role="tabpanel">
+                    <div class="row"> 
+
+                        {% for product in products %}
+                        <div class="col-lg-3 col-md-4 col-sm-6"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <!-- Product Image -->
+                                    <img class="prod-img" alt="{{ product.name }}" src="{{ product.image.url }}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />  
+
+                                    <!-- Icons -->
+                                    <div class="prod-icons"> 
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="{% url 'cart' %}" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>                                           
+
+                                <!-- Product Caption -->
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="{% url 'shop_detail' product.id %}"> 
+                                            <span class="light-font"> organic </span>  
+                                            <strong>{{ product.name }}</strong>
+                                        </a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">kshs {{ product.price }} per kg</strong> 
+                                        <del class="light-font">kshs {{ product.price }}</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <p class="text-center">No fruits available right now. Please check back later!</p>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / Shop Ends -->        
+
+{% endblock %}

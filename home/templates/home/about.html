@@ -1,62 +1,80 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
-{% block title %}We are Snazzy Orchard {% endblock %}
+{% block title %}Snazzy Orchard | About Us{% endblock  %}
 {% block content %}
-
-    <!--Breadcrumb Section Start-->
+    
     <br><br><br><br><br><br><br><br><br>
+    <!--Breadcrumb Section Start-->
     <section class="breadcrumb-bg">                
         <div class="theme-container container ">                       
             <div class="site-breadcumb white-clr">                        
-                <h2 class="section-title"> <strong class="clr-txt">Snazzy Orchard</strong><br><br>  <span class="light-font"> Our fruits Catalogue </span> </h2>
+                <h2 class="section-title"> <span class="light-font">about </span> <strong class="clr-txt">Snazzy </strong> <span class="light-font">orchard </span> </h2>
                 <ol class="breadcrumb breadcrumb-menubar">
-                    <li> <a href="#"> Home </a> SHOP  </li>                             
+                    <li> <a href="#"> Home </a> About  </li>                             
                 </ol>
             </div>  
         </div>
     </section>
     <!--Breadcrumb Section End-->
 
- <!-- Organic Farmfood Starts-->
-    <section class="organic-farm sec-space-top light-bg">
+    <!-- Organic Farmfood Starts-->
+    <section class="organic-farm-2 sec-space-bottom">
 
-        <img alt="" src="{% static 'assets/img/extra/sec-img-1.png' %}" class="left-bg-img" />  
-        <img alt="" src="{% static 'assets/img/extra/sec-img-2.png' %}" class="center-bg-img" />  
+        <img alt="" src="assets/img/extra/sec-img-7.png" class="left-bottom-img" />  
+        <img alt="" src="assets/img/extra/sec-img-8.png" class="right-top-img" />  
+
+        <div class="pattern"> 
+            <img alt="" src="assets/img/icons/white-pattern.png">
+        </div>
+        <div class="section-icon"> 
+            <img alt="" src="{% static 'assets/img/icons/icons-1.png' %}">
+
+            
+            <div class="ptb-15 icon"> 
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>  
+                <span class="light-font"> Purely Organic,</span> <strong>Truly Kenyan</strong>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>  
+            </div>
+        </div>
 
         <div class="container rel-div">
-            <div class="title-wrap">
-                <h2 class="section-title"> <span class="light-font">we are </span> <strong>Snazzy Orchard <img src="{% static 'assets/img/icons/logo-icon.png' %}" alt="" /> </strong> </h2>
-                <h4 class="sub-title"> <span> ABOUT SNAZZY ORCHARD </span> </h4>
-                <p>Snazzy Orchard is your trusted source for fresh, organic fruits and vegetables grown with care on Kenyan farms. From the sweet mangoes of Eastern Kenya to the vibrant pineapples, avocados, and leafy greens from across the country, we bring you nature’s finest harvest. At Snazzy Orchard, we believe in healthy living, sustainability, and supporting local farmers while delivering delicious farm-fresh produce straight to your table. </p>
+            <div class="row">
+                <div class="col-sm-6 text-right fsz-16 pt-15 xs-text">
+                    <p>At Snazzy Orchard, we are organic farmfood in every sense. Our mission is to bring the freshest, naturally grown fruits, vegetables, cereals, and dried fruits from Kenyan farms straight to your table. We work hand in hand with local farmers to ensure every product is cultivated with care, free from harmful chemicals, and bursting with natural flavor. From sun-ripened mangoes to nutrient-rich cereals and wholesome dried fruits, we are committed to healthy living, sustainability, and sharing the true taste of Kenya’s harvest with you.</p>
+                </div>
+                <div class="col-sm-6 text-left xs-text">
+                    <h2 class="section-title"> <span class="light-font">we are </span> <strong>Snazzy Orchard <img src="assets/img/icons/logo-icon.png" alt="" /> </strong> </h2>
+                    <h4 class="sub-title"><b>Naturally Grown, Carefully Picked</b> </h4>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-3 col-sm-6 text-center">
                     <div class="feature-wrap">
-                        <img src="{% static 'assets/img/extra/feature-1.png' %}" alt="" />
-                        <h3 class="title-1 ptb-15"> <span class="light-font">Farm-Fresh </span> <strong>  Guarantee</strong> </h3>
+                        <img src="assets/img/extra/feature-1.png" alt="" />
+                        <h3 class="title-1 ptb-15"> <span class="light-font">fresh </span> <strong> Farm-Fresh Guarantee</strong> </h3>
                         <p>All our produce is handpicked directly from Kenyan farms for peak freshness.  </p>
                         <a href="#" class="sm-bnt-wht">Read More</a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 text-center">
                     <div class="feature-wrap">
-                        <img src="{% static 'assets/img/extra/feature-2.png' %}" alt="" />
-                        <h3 class="title-1 ptb-15"> <span class="light-font"> 100%</span> <strong> organic goods</strong> </h3>
+                        <img src="assets/img/extra/feature-2.png" alt="" />
+                        <h3 class="title-1 ptb-15"> <span class="light-font"> 100%</span> <strong> organic produce</strong> </h3>
                         <p>No harmful chemicals or artificial additives, just pure natural goodness.  </p>
                         <a href="#" class="sm-bnt-wht">Read More</a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 text-center">
                     <div class="feature-wrap">
-                        <img src="{% static 'assets/img/extra/feature-3.png' %}" alt="" />
-                        <h3 class="title-1 ptb-15"> <span class="light-font">Support </span> <strong> Local Farmers</strong> </h3>
-                        <p>We work closely with Kenyan farmers to empower communities and promote sustainable livelihoods. </p>
+                        <img src="assets/img/extra/feature-3.png" alt="" />
+                        <h3 class="title-1 ptb-15"> <span class="light-font">Support </span> <strong> Local Farmers </strong> </h3>
+                        <p>We work closely with Kenyan farmers to empower communities and promote sustainable livelihoods.  </p>
                         <a href="#" class="sm-bnt-wht">Read More</a>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 text-center">
+                <div class="col-md-3 col-sm-f6 text-center">
                     <div class="feature-wrap">
-                        <img src="{% static 'assets/img/extra/feature-4.png' %}" alt="" />
+                        <img src="assets/img/extra/feature-4.png" alt="" />
                         <h3 class="title-1 ptb-15"> <span class="light-font">100% </span> <strong>natural</strong> </h3>
                         <p>Every product can be traced back to its source for quality assurance.  </p>
                         <a href="#" class="sm-bnt-wht">Read More</a>
@@ -69,10 +87,120 @@
             </div>
         </div>
     </section>
-    <!-- / Organic Farmfood Ends -->    
+    <!-- / Organic Farmfood Ends -->      
 
+    <!-- About Us Starts-->
+    <section class="short-about sec-space light-bg">
 
+        <img alt="" src="{% static 'assets/img/extra/sec-img-1.png' %}" class="left-top-img">  
+        <img alt="" src="{% static 'assets/img/extra/sec-img-3.png' %}" class="center-bg-img">  
+        <img alt="" src="{% static 'assets/img/extra/sec-img-4.png' %}" class="left-bottom-img">  
 
+        <div class="container rel-div">
+            <div class="title-wrap pt-15">                       
+                <h4 class="fsz-20"> <strong>Farm to Table,</strong> <span class="light-font">  The Organic Way </span> </h4>
+                <h2 class="fsz-50 over-txt-title"> 
+                    <span class="light-font"> WE DO <span class="over-txt light-bg">100% ORGANIC GUARANTEE</span> </span> 
+                    <strong>HEALTHY</strong> 
+                </h2>
+                <p>At Snazzy Orchard, our journey began with a simple passion: to bring the freshest, healthiest, and most natural food from Kenyan farms straight to your table. Every fruit, vegetable, cereal, and dried fruit we offer is grown with care, harvested at peak freshness, and delivered with love. <br><br> Supporting local farmers and promoting sustainable farming practices is at the heart of what we do. I am proud to share with you the true flavors of Kenya’s harvest and invite you to join us in celebrating healthy living, nutrition, and the richness of our land. </p>
+            </div>
 
+            <div class="about-wrap"> 
+                <img class="logo-img" alt="" src="{% static 'assets/img/extra/signature.png' %}" />
+                <h4 class=""> <strong>OWNER |</strong> <span class="light-font"> SNAZZY ORCHARD  </span> </h4>
+                <img class="logo-img" alt="" src="{% static 'assets/img/extra/about3.png' %}" /><br><br>
+                <h2 class="font-3 fsz-35">Live Organic Live Healthy</h2>
+                <div class="icon"> 
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>   
+                    <span class="light-font"> Purely Organic, </span> <strong>Truly Kenyan</strong> 
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>  
+                </div>
+            </div>
+        </div>
 
-{% endblock %}
+    </section>
+    <!-- / About Us Ends -->       
+
+    <!-- Our Products Starts-->
+    <section class="organic-product sec-space">
+        <div class="container"> 
+            <div class="row sec-space-top"> 
+                <div class="col-lg-6 col-sm-12"> 
+                    <div class="row"> 
+                        <div class="col-sm-4"> 
+                            <div class="organic-prod">
+                                <img src="{% static 'assets/img/extra/organic-1.png' %}" alt="" />
+                                <span class="divider"></span>
+                                <h3 class="title-1"> <a href="#"> <span class="light-font">organic </span> <strong> fruits</strong> </a> </h3>                                        
+                                <a class="clr-txt font-2" href="#"> <i> 52 items </i> </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4"> 
+                            <div class="organic-prod">
+                                <img src="{% static 'assets/img/extra/organic-2.png' %}" alt="" />
+                                <span class="divider"></span>
+                                <h3 class="title-1"> <a href="#"> <span class="light-font">fresh </span> <strong> vegetables</strong> </a> </h3>
+                                <a class="clr-txt font-2" href="#"> <i> 35 items </i> </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4"> 
+                            <div class="organic-prod">
+                                <img src="{% static 'assets/img/extra/organic-3.png' %}" alt="" />
+                                <span class="divider"></span>
+                                <h3 class="title-1"> <a href="#"> <span class="light-font">organic </span> <strong> juices</strong> </a> </h3>
+                                <a class="clr-txt font-2" href="#"> <i> 23 items </i> </a>                                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12"> 
+                    <div class="organic-prod-info">
+                        <h4 class="sub-title">  A Journey Through Kenya’s Harvest </h4>
+                        <h2 class="section-title ptb-15"> <span class="light-font">50+ </span> <strong>fruits, vegetables, juices </strong> <span class="light-font"> & </span> <strong> lot more</strong> </h2>
+                        <p class="fsz-16">At Snazzy Orchard, our catalogue is a celebration of Kenya’s rich agricultural bounty. From over 50 varieties of fresh fruits and vegetables, think sun ripened mangoes, juicy pineapples, sweet oranges, vibrant avocados, leafy greens, and colorful root vegetables, to a wide range of fresh, natural juices, smoothies, and farm to table delights, there is something for every taste. Each item is carefully grown, handpicked, and delivered with love, capturing the essence of Kenyan farms. Explore our collection and discover the flavors, nutrition, and freshness that make Snazzy Orchard more than just a market it is a journey through nature’s finest offerings. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row sec-space-top"> 
+                <div class="col-lg-6 col-sm-12"> 
+                    <div class="organic-prod-info">
+                        <h4 class="sub-title">  Taste the Heart of Kenyan Farms </h4>
+                        <h2 class="section-title ptb-15"> <span class="light-font">25+ </span> <strong>organic cereals </strong> <span class="light-font"> and </span> <strong> dried fruits</strong> </h2>
+                        <p class="fsz-16">At Snazzy Orchard, we offer over 25 varieties of organic cereals and dried fruits, carefully sourced from Kenyan farms and beyond. From wholesome oats, millet, and sorghum to nutrient rich dried mangoes, papayas, bananas, dates, and raisins, each product is naturally grown and packed with flavor and nutrition. Perfect for healthy breakfasts, snacks, or adding a natural touch to your meals, our cereals and dried fruits bring the goodness of nature directly to your table. Discover the richness of organic living with every bite from Snazzy Orchard</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12"> 
+                    <div class="row"> 
+                        <div class="col-sm-4"> 
+                            <div class="organic-prod">
+                                <img src="{% static 'assets/img/extra/organic-4.png' %}" alt="" />
+                                <span class="divider"></span>
+                                <h3 class="title-1"> <a href="#"> <span class="light-font">organic </span> <strong> Cereals and Grains</strong> </a> </h3>
+                                <a class="clr-txt font-2" href="#"> <i> 26 items </i> </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4"> 
+                            <div class="organic-prod">
+                                <img src="{% static 'assets/img/extra/organic-5.png' %}" alt="" />
+                                <span class="divider"></span>
+                                <h3 class="title-1"> <a href="#"> <span class="light-font">dried </span> <strong> fruits</strong> </a> </h3>
+                                <a class="clr-txt font-2" href="#"> <i> 31 items </i> </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4"> 
+                            <div class="organic-prod">
+                                <img src="{% static 'assets/img/extra/organic-6.png' %}" alt="" />
+                                <span class="divider"></span>
+                                <h3 class="title-1"> <a href="#"> <span class="light-font">nuts </span> <strong> & seeds</strong> </a> </h3>
+                                <a class="clr-txt font-2" href="#"> <i> 17 items </i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>                        
+            </div>
+        </div>
+    </section>
+    <!-- / Our Products Ends -->     
+
+{% endblock  %}

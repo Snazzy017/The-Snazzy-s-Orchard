@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Snazzy Orchard | Shop Detail{% endblock %}
+
+{% block content %}
+
+<!--Breadcrumb Section Start-->
+<br><br><br><br><br><br><br><br><br>
+<section class="breadcrumb-bg">                
+    <div class="theme-container container ">                       
+        <div class="site-breadcumb white-clr">                        
+            <h2 class="section-title"> <strong class="clr-txt">naturix </strong> <span class="light-font">Shop </span> </h2>
+            <ol class="breadcrumb breadcrumb-menubar">
+                <li> <a href="#"> Home </a> Product Detail </li>                             
+            </ol>
+        </div>  
+    </div>
+</section>
+<!--Breadcrumb Section End-->
+
+<section class="shop-wrap sec-space-bottom">
+    <div class="container rel-div pt-50">
+        <div class="row">  
+            <div class="col-md-12 pt-15">
+                <div class="product-single sec-space-bottom clearfix">
+                    
+                    <!-- Single Products Slider Starts --> 
+                    <div class="col-lg-6 pb-50 col-sm-8 col-sm-offset-2 col-lg-offset-0">
+                        <div class="prod-slider sync1">
+                            {% for img in product.images.all %}
+                                <div class="item"> 
+                                    <img src="{{ img.image.url }}" alt="{{ product.name }}">                                           
+                                </div>
+                            {% empty %}
+                                <div class="item"> 
+                                    <img src="{% static 'assets/img/no-image.png' %}" alt="{{ product.name }}">
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="sync2">
+                            {% for img in product.images.all %}
+                                <div class="item"> <a href="#"> <img src="{{ img.image.url }}" alt="{{ product.name }}"> </a> </div>
+                            {% empty %}
+                                <div class="item"> <a href="#"> <img src="{% static 'assets/img/no-image.png' %}" alt="{{ product.name }}"> </a> </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!-- Single Products Slider Ends --> 
+
+                    <div class="col-lg-6">
+                        <div class="product-content block-inline">
+                            <!-- Tags and Rating -->
+                            <div class="tag-rate">
+                                <!-- Static tags for now -->
+                                <span class="prod-tag tag-1">Fresh</span>
+                                <span class="prod-tag tag-1">Organic</span>
+                                <span class="prod-tag tag-1">Seasonal</span>
+
+                                <div class="rating">
+                                    <span class="star active"></span>
+                                    <span class="star active"></span>
+                                    <span class="star active"></span>
+                                    <span class="star active"></span>
+                                    <span class="star active"></span> 
+                                    <span class="fsz-12 gray-color ml-10"> Based on 25 reviews</span>
+                                </div>
+                            </div>
+
+                            <div class="single-caption"> 
+                                <h3 class="section-title">
+                                    <a href="#"> <span class="light-font"> organic </span>  <strong>{{ product.name }}</strong></a>
+                                </h3>
+                                <span class="divider-2"></span>
+                                <p class="price"> 
+                                    <strong class="clr-txt fsz-20">Ksh {{ product.price }} </strong> 
+                                </p>
+
+                                <div class="fsz-16">
+                                    <p>{{ product.description }}</p>
+                                </div>
+
+                                <div class="prod-btns">
+                                    <div class="quantity">
+                                        <button class="btn minus"><i class="fa fa-minus-circle"></i></button>
+                                        <input title="Qty" value="1" class="form-control qty" type="text">
+                                        <button class="btn plus"><i class="fa fa-plus-circle"></i></button>
+                                    </div>
+                                    <div class="form-group"> 
+                                        <i class="fa fa-check-square-o clr-txt"></i> <span>Ready in stock</span> 
+                                    </div>
+                                </div>
+
+                                <ul class="meta">
+                                    <li><strong> SKU </strong> <span>: &nbsp; {{ product.sku }}</span></li>
+                                    <li><strong> CATEGORY </strong> <span>: &nbsp; {{ product.category }}</span></li>
+                                </ul>
+                                <div class="divider-full-1"></div>
+                                <div class="add-cart pt-15">
+                                    <a href="#" class="theme-btn btn"> <strong> ADD TO CART </strong> </a>
+                                    <br><br><br><br><br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>  
+
+                <!-- Related Products -->
+                <div class="you-like organic-content pb-50">
+                    <h3 class="fsz-20 pb-15 text-center"><span class="light-font">Related  </span> <strong>Products </strong></h3>
+                    <div class="divider-full-1"></div>
+                    <div id="rel-prod-slider" class="rel-prod-slider nav-1">
+                        {% for related in related_products %}
+                        <div class="item"> 
+                            <div class="product-box"> 
+                                <div class="product-media"> 
+                                    <img class="prod-img" alt="{{ related.name }}" src="{{ related.image.url }}" />     
+                                    <img class="shape" alt="" src="{% static 'assets/img/icons/shap-small.png' %}" />  
+                                </div>                                           
+                                <div class="product-caption"> 
+                                    <h3 class="product-title">
+                                        <a href="{% url 'shop_detail' related.id %}"><span class="light-font"> organic </span>  <strong>{{ related.name }}</strong></a>
+                                    </h3>
+                                    <div class="price"> 
+                                        <strong class="clr-txt">Ksh {{ related.price }} </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- / Related Products -->
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / Shop Ends --> 
+
+{% endblock %}

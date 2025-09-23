@@ -1,11 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>contact</h1>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Snazzy Orchard | Contact{% endblock  %}
+{% block content %}
+
+    <br><br><br><br><br><br><br><br><br>
+    <!--Breadcrumb Section Start-->
+    <section class="breadcrumb-bg">                
+        <div class="theme-container container ">                       
+            <div class="site-breadcumb white-clr">                        
+                <h2 class="section-title"> <strong class="clr-txt">Snazzy </strong> <span class="light-font">Orchard </span> </h2>
+                <ol class="breadcrumb breadcrumb-menubar">
+                    <li> <a href="#"> Home </a> Contact  </li>                             
+                </ol>
+            </div>  
+        </div>
+    </section>
+    <!--Breadcrumb Section End-->
+
+
+    <!-- Shop Starts-->
+    <section class="contact-wrap sec-space-bottom">
+        <div class="container rel-div pt-50">
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="contact-map">  <div id="map"></div> </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-details">
+                        <h3 class="fsz-25"><span class="light-font">Snazzy Orchard  </span> <strong>Address </strong>  </h3> 
+                        <h6 class="sub-title-1 pb-15">ORGANIC STORE</h6>
+
+                        <h5 class="clr-txt fsz-12 pt-15">SNAZZY INDUSTRIES</h5>
+                        <p>	Makueni, Makuneni County</p>
+
+                        <ul>
+                            <li> <strong>Call:  </strong> <i>(+254) 2234 999</i> </li>
+                            <li> <strong>Email: </strong> <i> <a href='#'>info@snazzyorchard.com</a> </i> </li>
+                            <li> <strong>Facebook: </strong> <i>  <a href='#'>Snazzy Orchard </a> </i> </li>
+                            <li> <strong>Twitter: </strong> <i>  <a href='#'> Snazzy Orchard </a> </i> </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider-full-1"></div>
+
+            <div class="pt-50 col-md-8 col-md-offset-2">
+                <h3 class="fsz-25 text-center"><span class="light-font">Contact </span> <strong>naturix </strong>  </h3> 
+                <h6 class="sub-title-1 text-center">ORGANIC STORE</h6>
+
+                <div class="contact-form pt-50">
+                    <form class="contact-form row" id="contact-form">
+                        <div class="form-group col-sm-4">
+                            <input class="form-control" placeholder="Name" name="Name" id="Name" required="" type="text">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <input class="form-control" placeholder="Email" name="Email" id="Email" required="" type="email">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <input class="form-control" placeholder="Phone" name="Phone" id="Phone" type="text">
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <textarea class="form-control"  placeholder="Message" name="Message" id="Message" cols="12" rows="4"></textarea>
+                        </div>
+                        <div class="form-group col-sm-12 text-center pt-15">                                               
+                            <button class="theme-btn" type="submit"> <strong> SEND EMAIL </strong> </button>                                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>                
+    </section>
+    <!-- / Shop Ends -->   
+
+{% endblock  %}

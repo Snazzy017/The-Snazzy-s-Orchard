@@ -1,77 +1,296 @@
-.products-section{
-    background-color: rgb(223, 185, 18);
-}
-.products-container{
-    /* arrange items horizontally */
-    display: flex;
-     /* allow wrapping if screen is small */
-    flex-wrap: wrap;
-    /* space between items */
-    gap: 20px;
-    /* centre alignment */
-    justify-content: center;
-    margin: 20px;
+.login-btn{
+    background-color: rgb(49, 124, 49);
+    margin-left: 15px;
+    padding: 10px;
+    border-radius: 12px;
+
 }
 
-.products_title{
-    align-items: center;
-    justify-content: center;
-    margin-left: 570px;
-    font-weight: bolder;
-    font-style: italic;
-    color: #e67e22;
+.login-btn:hover{
+    background-color: rgb(56, 194, 56);
+
 }
-.product_paragraph{
-    align-items: center;
-    justify-content: center;
-    margin-left: 500px;
-    font-weight: bold;
-}
-.product-card {
-    text-align: center;
-    border: 1px solid;
-    border-radius: 10px;
-    padding: 10px;
-    width: 200px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.product-card img {
-     /* make image fit card*/
-    width: 100%;
-     /* fix height */
-    height: 150px;
-    /* crop instead of stretching */
-    object-fit: cover;
-    border-radius: 10px;
-    border-bottom: 10px;
-}
-.product-card h3 {
-    margin: 10px 0 5px;
-    font-size: 18px;
-    color: #333;
-}
-.product-card:hover {
-    transform: translate(-8px);
-    box-shadow: 0 6px 12px;
-}
-/* buy button style */
-.buy-btn {
-    background-color: #28a745;
+
+.login-btn a{
     color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
 }
-.buy.btn:hover{
-    background: #218838;
-    transform: scale(1.05);
+
+/* =============================================lOGIN FORM ===========================*/
+
+/* Container */
+.login-section {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
 }
-/* price style */
-.price{
-    font-size: 16px;
+
+.login-container {
+    max-width: 420px;
+    width: 100%;
+    background: #fff;
+    padding: 40px 30px;
+    border: 1px solid #b68c4a;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Logo */
+.login-logo {
+    width: 90px;
+    margin-bottom: 20px;
+}
+
+/* Title */
+.login-title {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 10px;
     font-weight: bold;
-    color: #111110f5;
-    margin-bottom: 12px;
 }
+
+/* Subtitle */
+.login-subtitle {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Form */
+.login-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+/* Forgot Password */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    font-size: 1.3rem;
+    color: #b68c4a;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.form-actions {
+    margin-top: 10px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid #b68c4a;
+    color: #b68c4a;
+    font-size: 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #b68c4a;
+    color: #fff;
+}
+
+/* Signup link */
+.signup-link {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #444;
+}
+
+.signup-link a {
+    color: #b68c4a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    .login-title {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+/* =======================================SIGN UP STYLING  =====================================*/
+/*** sign up start **/
+
+/* Container */
+.signup-section {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.signup-container {
+    max-width: 450px;
+    width: 100%;
+    background: #fff;
+    padding: 40px 30px;
+    border: 1px solid #b68c4a;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Logo */
+.signup-logo {
+    width: 90px;
+    margin-bottom: 20px;
+}
+
+/* Title */
+.signup-title {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Subtitle */
+.signup-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Form */
+.signup-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+/* Buttons */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    flex: 1;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid #b68c4a;
+    color: #b68c4a;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #b68c4a;
+    color: #fff;
+}
+
+.btn-secondary {
+    flex: 1;
+    padding: 12px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #555;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #eaeaea;
+}
+
+/* Login link */
+.login-link {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.login-link a {
+    color: #b68c4a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .signup-container {
+        padding: 30px 20px;
+    }
+
+    .signup-title {
+        font-size: 1.6rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}
+
+/** sign up **/
